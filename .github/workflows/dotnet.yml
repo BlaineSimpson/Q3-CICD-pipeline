@@ -53,5 +53,5 @@ jobs:
         run: |
           git add .
           git commit -m "Deploying to staging" || echo "No changes to commit."
-          git push origin staging  # Push the changes to the staging branch
+          git push origin staging environment # Push the changes to the staging environment branch
           
