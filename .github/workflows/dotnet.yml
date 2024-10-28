@@ -38,8 +38,6 @@ jobs:
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
           git config --local user.name "BlaineSimpson"
-      - name: Commit and Push to Staging
-        run: |
           git add .
           git commit -m "Deploying to staging"
           git push origin staging  # Push the changes to the staging branch
