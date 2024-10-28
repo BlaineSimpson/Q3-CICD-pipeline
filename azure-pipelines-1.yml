@@ -32,3 +32,15 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    azureSubscription: 'Azure for Students(0713e219-08b8-43dd-b2cf-5f49357f5f4b)'
+    command: 'build'
+    
+
+- task: DotNetCoreCLI@2
+  inputs:
+        azureSubscription: 'Azure for Students(0713e219-08b8-43dd-b2cf-5f49357f5f4b)'
+        command: 'test'
+
