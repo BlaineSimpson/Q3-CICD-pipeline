@@ -32,13 +32,13 @@ jobs:
     environment: staging
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Deploy to Staging
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
           git config --local user.name "BlaineSimpson"
-          git push origin staging enviroment  # Push  the staging branch
+          git push origin master  # Push  the staging branch
 
           
   
