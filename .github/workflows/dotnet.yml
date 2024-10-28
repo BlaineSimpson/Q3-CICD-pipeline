@@ -26,7 +26,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-       test:
+test:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -37,28 +37,24 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'  # Specify the Node.js version
-
       - name: Install dependencies
         run: npm install
-
       - name: Run unit tests
         run: npm test  # Adjust according to your test command
-
       - name: Run code coverage
         run: npm run coverage  # Adjust according to your coverage command
-
       - name: Run code analysis
         run: npm run lint  # Adjust according to your linting command
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment: staging
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to Staging
+  
+deploy:
+  runs-on: ubuntu-latest
+  needs: build
+  environment: staging
+     steps:
+     - name: Checkout code
+       uses: actions/checkout@v4
+     - name: Deploy to Staging
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
           git config --local user.name "BlaineSimpson"
