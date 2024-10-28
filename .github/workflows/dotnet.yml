@@ -38,9 +38,7 @@ jobs:
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
           git config --local user.name "Blaine"
-          git checkout staging
-          git merge develop
-          git push origin staging  # Push the merged changes to the staging branch
+          git push origin staging enviroment  # Push  the staging branch
 
           
   
