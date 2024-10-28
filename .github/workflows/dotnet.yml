@@ -26,9 +26,13 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: deploy .NET Core app to Azure App Service Linux
+
+    - name: GitHub Action for deplying staging apps on fly.io
   # You may pin to the exact commit or the version.
-  # uses: Darkace01/DotNet-Azure-AppService-Action@252b249f228e4affacc8559957c6d947241574c4
-      uses: Darkace01/DotNet-Azure-AppService-Action@first-release
+  # uses: jsierles/fly-staging-app@fe0390edc562704745b6b6da056f9a4fef7cfacd
+      uses: jsierles/fly-staging-app@v1
+
+          
+  
           
       
