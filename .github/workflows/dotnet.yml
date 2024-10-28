@@ -38,8 +38,15 @@ jobs:
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
           git config --local user.name "BlaineSimpson"
+      - name: Copy build artifacts
+        run: |
+          # Assuming your build artifacts are in the 'bin/Debug/net8.0' directory
+          cp -r bin/Debug/net8.0/* .  # Adjust the path as necessary
+
+      - name: Commit and Push to Staging
+        run: |
           git add .
-          git commit -m "Deploying to staging"
+          git commit -m "Deploying to staging" || echo "No changes to commit."
           git push origin staging  # Push the changes to the staging branch
 
           
