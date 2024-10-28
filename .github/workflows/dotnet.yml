@@ -35,6 +35,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to Staging
+        run:
+          git config --local user.email "blainsimpson.bs@gmail.com"
+          git config --local user.name "Blaine"
+          git checkout staging
+          git merge develop
+          git push origin staging  # Push the merged changes to the staging branch
 
           
   
