@@ -26,11 +26,15 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment: staging
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: GitHub Action for deplying staging apps on fly.io
-  # You may pin to the exact commit or the version.
-  # uses: jsierles/fly-staging-app@fe0390edc562704745b6b6da056f9a4fef7cfacd
-      uses: jsierles/fly-staging-app@v1
+      - name: Deploy to Staging
 
           
   
