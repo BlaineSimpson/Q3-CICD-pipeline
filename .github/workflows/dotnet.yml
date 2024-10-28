@@ -41,7 +41,8 @@ jobs:
         run: |
           # Publish the application to prepare it for deployment
           dotnet publish -c Release -o ./publish
-          cp -r ./publish/* .
+           rm -rf "./Q3 CICD pipeline"
+           cp -r ./publish/* 
 
       - name: Configure Git
         run: |
