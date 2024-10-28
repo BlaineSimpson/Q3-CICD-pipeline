@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to Staging
         run:
           git config --local user.email "blainsimpson.bs@gmail.com"
-          git config --local user.name "Blaine"
+          git config --local user.name "BlaineSimpson"
           git push origin staging enviroment  # Push  the staging branch
 
           
