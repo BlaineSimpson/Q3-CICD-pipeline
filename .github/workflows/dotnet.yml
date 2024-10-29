@@ -56,12 +56,12 @@ jobs:
 
       - name: Commit and Push to Staging
         env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub Actions
+             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         run: |
                git checkout -b stage || echo "Branch already exists, checking out."
                git add .
-               git commit -m "Deploying to stagee" || echo "No changes to commit."
-               git push origin stagee  # Push to the 'stagee' branch
+               git commit -m "Deploying to stage" || echo "No changes to commit."
+               git push origin stage  
 
       - name: Send Push Notification
         uses: techulus/push-github-action@1.0.0
