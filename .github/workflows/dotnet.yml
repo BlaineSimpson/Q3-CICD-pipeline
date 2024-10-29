@@ -55,7 +55,7 @@ jobs:
         env:
              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub Actions
         run: |
-               git checkout -b staging || echo "Branch already exists, checking out."
+               git checkout -b stage || echo "Branch already exists, checking out."
                git add .
-               git commit -m "Deploying to staging" || echo "No changes to commit."
-               git push origin staging  # Push to the 'staging' branch
+               git commit -m "Deploying to stage" || echo "No changes to commit."
+               git push origin stage  # Push to the 'stage' branch
