@@ -61,7 +61,7 @@ jobs:
                git checkout -b stage || echo "Branch already exists, checking out."
                git add .
                git commit -m "Deploying to stage" || echo "No changes to commit."
-               git push origin stage  # Push to the 'stage' branch
+               git push origin stagee  # Push to the 'stagee' branch
 
       - name: Send Push Notification
         uses: techulus/push-github-action@1.0.0
