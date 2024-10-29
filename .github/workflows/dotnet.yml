@@ -60,7 +60,7 @@ jobs:
         run: |
                git checkout -b stage || echo "Branch already exists, checking out."
                git add .
-               git commit -m "Deploying to stage" || echo "No changes to commit."
+               git commit -m "Deploying to stagee" || echo "No changes to commit."
                git push origin stagee  # Push to the 'stagee' branch
 
       - name: Send Push Notification
